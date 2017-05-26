@@ -1,0 +1,159 @@
+html, body {
+  font-size: 18px;
+  background-color: lightgray;
+}
+
+.image-container {
+  width: 100%;
+}
+
+/* Header Section */
+
+header {
+  height: 64px;
+  background-color: white;
+}
+
+header #logo {
+   padding-left: 24px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav #logo-section {
+  display: flex;
+  align-items: center;
+}
+
+header nav li {
+  display: inline-flex;
+  padding-right: 16px;
+}
+
+.compact-menu {
+  display: none;
+}
+
+/* Banner Section */
+
+.banner-section {
+  display: flex;
+}
+
+.banner-section .banner-image {
+  width: 60%;
+  padding-left: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 40px;
+}
+
+.banner-section .banner-image img {
+  max-width: 100%;
+}
+
+.banner-section .banner-info-container {
+  padding-left: 40px;
+  padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-start;;
+  justify-content: center;
+}
+
+.banner-button {
+  background-color: gray;
+  width: 100%;
+}
+
+.banner-button p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+/* Article Section */
+
+.article-section .main-article {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.article-section .main-article .image-container img{
+  max-width: 100%;
+}
+
+.article-section {
+  display: flex;
+}
+
+.article-section .article {
+  display: flex;
+  width: 423px;
+  height: 30%;
+}
+
+.article-section .article .article-image {
+  padding: 16px;
+  width: 35%;
+  height: 144px;
+}
+
+.article-section .article .article-image img {
+  width: 100%;
+}
+
+.article-section .sub-articles {
+  width: 423px;
+  padding-top: 16px;
+}
+
+/* Classes Section */
+
+.section-title-bar {
+  width: 100%;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.class-section {
+  margin-left: 125px;
+  margin-right: 125px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.class {
+  width: 30%;
+  margin: 8px 16px;
+  background-color: white;
+}
+
+.class .image-container img {
+  max-width: 100%;
+}
+
+.class .content h3 {
+  padding-left: 16px;
+}
+
+.class .content p {
+  padding-left: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+footer a {
+  text-decoration: none;
+}
