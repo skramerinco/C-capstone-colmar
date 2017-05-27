@@ -1,10 +1,37 @@
 html, body {
   font-size: 18px;
-  background-color: lightgray;
+  background-color: #ECEBEF;
+  color: #3b3a30;
+  margin: 0;
+  font-family: 'Libre Franklin', sans-serif;;
 }
 
+/* set background colors to be used throughout the site */
+.color-light-bg {
+ background-color: #eaece5;
+}
+
+.color-medium-bg {
+  background-color: #b2c2bf;
+}
+
+.color-dark-bg {
+  background-color: #3b3a30;
+}
+
+/* Generic image container to use throughout page */
 .image-container {
   width: 100%;
+}
+
+/* Generic styling on the anchor tags */
+a {
+  text-decoration: none;
+  color: #3b3a30;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Header Section */
@@ -16,6 +43,10 @@ header {
 
 header #logo {
    padding-left: 24px;
+}
+
+header .name {
+  font-weight: bold;
 }
 
 header nav {
@@ -66,8 +97,13 @@ header nav li {
 }
 
 .banner-button {
-  background-color: gray;
   width: 100%;
+  color: white;
+  transition: background-color .3s linear .1s;
+}
+
+.banner-button:hover {
+  background-color: #c0ded9;
 }
 
 .banner-button p {
@@ -95,6 +131,11 @@ header nav li {
   display: flex;
   width: 423px;
   height: 30%;
+  transition: background-color .3s linear .1s;
+}
+
+.article:hover {
+  background-color: #c0ded9;
 }
 
 .article-section .article .article-image {
@@ -114,17 +155,21 @@ header nav li {
 
 /* Classes Section */
 
-.section-title-bar {
+.class-title-bar {
   width: 100%;
   text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
+.class-background {
+  width: 100%;
+}
+
 .class-section {
   margin-left: 125px;
   margin-right: 125px;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -133,6 +178,11 @@ header nav li {
   width: 30%;
   margin: 8px 16px;
   background-color: white;
+  transition: background-color .3s linear .1s;
+}
+
+.class:hover {
+  background-color: #c0ded9;
 }
 
 .class .image-container img {
@@ -147,13 +197,26 @@ header nav li {
   padding-left: 16px;
 }
 
+/* Thesis Section */
+
+.thesis-title-bar {
+  width: 100%;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Footer Section */
+
 footer {
   display: flex;
   justify-content: space-between;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 32px;
 }
 
-footer a {
-  text-decoration: none;
+footer nav li {
+  display: inline-flex;
+  padding-right: 16px;
 }
