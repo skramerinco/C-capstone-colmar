@@ -1,6 +1,12 @@
+:root {
+  --light-color: #eaece5;  /* for background on slightly lighter sections */
+  --medium-color: #b2c2bf; /* for background on slightly darker sections */
+  --dark-color: #3b3a30; /* for buttons and text */
+  --hover-color: #c0ded9; /* color to show when section is hovered over */
+}
+
 html, body {
   font-size: 18px;
-  background-color: #ECEBEF;
   color: #3b3a30;
   margin: 0;
   font-family: 'Libre Franklin', sans-serif;;
@@ -8,6 +14,7 @@ html, body {
 
 /* set background colors to be used throughout the site */
 .color-light-bg {
+ /* background-color: var(--light-color); */
  background-color: #eaece5;
 }
 
@@ -55,7 +62,7 @@ header nav {
   align-items: center;
 }
 
-header nav #logo-section {
+header nav .logo-section {
   display: flex;
   align-items: center;
 }
@@ -65,8 +72,28 @@ header nav li {
   padding-right: 16px;
 }
 
-.compact-menu {
+.mobile-menu {
   display: none;
+  padding-right: 24px;
+}
+
+@media only screen and (max-width: 695px) {
+  .regular-menu {
+    display: none;
+  }
+  .mobile-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+  }
+  .logo-section #logo {
+    display: none;
+  }
+  .logo-section span {
+    display: none;
+  }
 }
 
 /* Banner Section */
@@ -75,7 +102,7 @@ header nav li {
   display: flex;
 }
 
-.banner-section .banner-image {
+.banner-image {
   width: 60%;
   padding-left: 24px;
   padding-top: 32px;
@@ -83,11 +110,11 @@ header nav li {
   padding-right: 40px;
 }
 
-.banner-section .banner-image img {
+.banner-image img {
   max-width: 100%;
 }
 
-.banner-section .banner-info-container {
+.banner-info-container {
   padding-left: 40px;
   padding-right: 120px;
   display: flex;
@@ -112,45 +139,137 @@ header nav li {
   text-align: center;
 }
 
-/* Article Section */
+@media only screen and (max-width: 695px){
+  .banner-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .banner-image img {
+    width: 100%;
+  }
+  .banner-info-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    }
 
-.article-section .main-article {
+  .banner-info {
+     max-width: 100%;
+     margin: 0;
+     padding: 0 16px;
+  }
+}
+
+/* Shared items for Article and Thesis Section */
+
+.main-container {
   padding: 32px 24px;
   width: 60%;
 }
 
-.article-section .main-article .image-container img{
+.image-container img{
   max-width: 100%;
 }
 
-.article-section {
+.section-container {
   display: flex;
 }
 
-.article-section .article {
+.content {
+  width: 65%
+}
+
+.item-container {
   display: flex;
-  width: 423px;
+  width: 100%;
   height: 30%;
   transition: background-color .3s linear .1s;
 }
 
-.article:hover {
+.item-container:hover {
   background-color: #c0ded9;
 }
 
-.article-section .article .article-image {
-  padding: 16px;
+.sub-containers {
+  max-width: 100%;
+  padding-top: 16px;
+}
+
+.content a {
+  color: blue;
+}
+
+@media only screen and (max-width: 695px) {
+  .sub-containers {
+    width: 100%;
+  }
+  .item-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-bottom: 16px;
+  }
+  .content {
+  width: 80%;
+  padding: 0 32px;
+  }
+  .item-container {
+  display: flex;
+  flex-direction: column;
+  }
+}
+
+/* Article Section */
+
+#image1 {
+  background-image: url(../images/information-orientation.jpg);
+}
+
+#image2 {
+  background-image: url(../images/information-campus.jpg);
+}
+
+#image3 {
+  background-image: url(../images/information-guest-lecture.jpg);
+}
+
+#image1, #image2, #image3 {
+  background-size: cover;
+  margin: 16px;
   width: 35%;
   height: 144px;
 }
 
-.article-section .article .article-image img {
-  width: 100%;
-}
+@media only screen and (max-width: 695px) {
 
-.article-section .sub-articles {
-  width: 423px;
-  padding-top: 16px;
+  .article-section .main-container {
+    display: none;
+  }
+
+  #image1 {
+    background-image: url(../images/information-orientation-mobile.jpg);
+  }
+  #image2 {
+    background-image: url(../images/information-campus-mobile.jpg);
+  }
+  #image3 {
+    background-image: url(../images/information-guest-lecture-mobile.jpg);
+  }
+
+  #image1, #image2, #image3 {
+    background-position: center;
+    width: auto;
+    height: 272px;
+    display: flex;
+    flex-grow: 1;
+  }
 }
 
 /* Classes Section */
@@ -197,6 +316,36 @@ header nav li {
   padding-left: 16px;
 }
 
+.classes-menu-mobile {
+  display: none;
+}
+
+.classes-menu-mobile .menu-item {
+  padding: 16px;
+  margin: 8px 16px;
+  background-color: #b2c2bf;
+}
+
+@media only screen and (max-width: 695px) {
+  .class-title-bar {
+    background-color: #eaece5;
+    padding-bottom: 16px;
+  }
+  .class {
+    display: none;
+  }
+  .classes-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .class-section {
+    max-width: 100%;
+    margin: 0px;
+    background-color: #eaece5;
+  }
+}
+
 /* Thesis Section */
 
 .thesis-title-bar {
@@ -204,6 +353,37 @@ header nav li {
   text-align: center;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.thesis-image {
+  margin: 16px;
+  width: 35%;
+  height: 144px;
+}
+
+.thesis-image img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 695px) {
+  .thesis-section .sub-containers {
+    display: none;
+  }
+
+  .thesis-section .main-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .thesis-section .main-container h2 {
+    display: none;
+  }
+
+  .thesis-section .main-container p {
+    display: none;
+  }
 }
 
 /* Footer Section */
@@ -219,4 +399,16 @@ footer {
 footer nav li {
   display: inline-flex;
   padding-right: 16px;
+}
+
+@media only screen and (max-width: 695px) {
+  footer {
+    padding-bottom: 16px;
+  }
+  footer nav {
+    display: none;
+  }
+  footer div {
+    padding-top: 40px;
+  }
 }

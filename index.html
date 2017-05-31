@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="./resources/css/reset.css">
+  <!-- <link rel="stylesheet" href="./resources/css/reset.css">-->
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
   <link href="./resources/css/style.css" rel="stylesheet">
+  <title>Colmar Academy - Home</title>
+  <link rel="icon" href="./resources/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <nav>
-      <div id="logo-section">
+      <div class="logo-section">
         <img id="logo" src="./resources/images/ic-logo.svg" />
         <span class="name">COLMAR</span><span class="type">ACADEMY</span>
       </div>
@@ -21,7 +24,8 @@
           <li><a href="#">Sign In</a></li>
         </ul>
       </div>
-      <div class="compact-menu">
+      <div class="mobile-menu">
+        <img id="logo" src="./resources/images/ic-logo.svg" />
         <img src="./resources/images/ic-on-campus.svg" />
         <img src="./resources/images/ic-online.svg" />
         <img src="./resources/images/ic-login.svg" />
@@ -46,40 +50,40 @@
   </div>
 
   <!-- Article Section -->
-  <div class="article-section color-light-bg">
-    <div class="main-article">
+  <div class="section-container article-section color-light-bg">
+    <div class="main-container">
       <div class="image-container">
         <img src="./resources/images/information-main.jpg" />
       </div>
       <h2>It doesn't hurt to keep practicing</h2>
       <p>Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. </p>
     </div>
-    <div class="sub-articles">
-      <div class="article">
-        <div class="article-image">
-          <img src="./resources/images/information-orientation.jpg"/>
+    <div class="sub-containers">
+      <div class="item-container">
+        <div id="image1">
+          <!-- <img id="image1" src="./resources/images/information-orientation.jpg"/> -->
         </div>
-        <div class="article-content">
+        <div class="content">
           <h3>Orientation date</h3>
           <p>Tue 10/11 &amp; Wed 10/12: 8am-3pm</p>
           <a href="#">Read more</a>
         </div>
       </div>
-      <div class="article">
-        <div class="article-image">
-          <img src="./resources/images/information-campus-mobile.jpg"/>
+      <div class="item-container">
+        <div id="image2">
+          <!-- <img src="./resources/images/information-campus-mobile.jpg"/> -->
         </div>
-        <div class="article-content">
+        <div class="content" >
           <h3>Our campus</h3>
           <p>Find which campus is close by you</p>
           <a href="#">Read more</a>
         </div>
       </div>
-      <div class="article">
-        <div class="article-image">
-          <img src="./resources/images/information-guest-lecture.jpg"/>
+      <div class="item-container">
+        <div id="image3">
+          <!-- <img src="./resources/images/information-guest-lecture.jpg"/> -->
         </div>
-        <div class="article-content">
+        <div class="content">
           <h3>Our guest lecture</h3>
           <p>Join a keynote with Oliver Sack about music in medical treatment</p>
           <a href="#">Read more</a>
@@ -160,38 +164,59 @@
         <p>Analytics, Content Marketing, Mobile Marketing</p>
       </div>
     </div>
+
+    <div class="classes-menu-mobile">
+      <div class="menu-item">
+        <h3>Software Engineering</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Computer Art</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Design</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Data</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Business</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Marketing</h3>
+      </div>
+    </div>
   </div>
 </div>
+
   <!-- Thesis Section -->
 
   <div class="thesis-title-bar color-light-bg">
     <h2>Thesis exhibit</h2>
   </div>
 
-  <!-- Thesis Section -->
-  <div class="article-section color-light-bg">
-    <div class="main-article">
+  <div class="thesis-section section-container color-light-bg">
+    <div class="main-container">
       <div class="image-container">
         <video src="resources/videos/thesis.mp4" width="100%" height="auto" controls>Video not supported</video>
       </div>
       <h2>Reimagine urban</h2>
       <p>Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. </p>
     </div>
-    <div class="sub-articles">
-      <div class="article">
-        <div class="article-image">
+    <div class="sub-containers">
+      <div class="item-container">
+        <div class="thesis-image">
           <img src="./resources/images/thesis-fisma.jpg"/>
         </div>
-        <div class="article-content">
+        <div class="content">
           <h3>Fisma: Design and</h3>
           <p>Designer showcase of new prototype product</p>
         </div>
       </div>
-      <div class="article">
-        <div class="article-image">
+      <div class="item-container">
+        <div class="thesis-image">
           <img src="./resources/images/thesis-now-and-then.jpg"/>
         </div>
-        <div class="article-content">
+        <div class="content">
           <h3>Now and then</h3>
           <p>Research study about New York</p>
         </div>
